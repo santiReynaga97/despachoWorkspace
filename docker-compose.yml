@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    container_name: dev_despachos_management_postgres_container
+    environment:
+      - DATABASE_HOST=127.0.0.1
+      - POSTGRES_DB=despachos_management
+      - POSTGRES_USER=developer
+      - POSTGRES_PASSWORD=despachos2
+    ports:
+      - "5432:5432"
+    volumes:      
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - dev-network
+ 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: dev_despachos_management_pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "santiago.reynaga@tecnoavance.mx"
+      PGADMIN_DEFAULT_PASSWORD: "messi1234"
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+    networks:
+      - dev-network
+         
+ 
+networks:
+  dev-network:
+    driver: bridge
+ 
+volumes:
+  postgres-data:

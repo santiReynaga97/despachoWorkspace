@@ -7,9 +7,74 @@
       "sharedGlobals"
     ],
     "production": [
-      "default"
+      "default",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/eslint.config.js"
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "ZmZmNWVkYzgtNDkwMS00MTUwLWIxNDktNWJlOGQ3ZmE3Y2VjfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MmQwMWIzYmItODg5MC00N2E2LWFmNmUtOWNhNGE5NTI5MzVifHJlYWQtd3JpdGU=",
+  "plugins": [
+    {
+      "plugin": "@nx-dotnet/core",
+      "options": {
+        "solutionFile": "{npmScope}.nx-dotnet.sln",
+        "inferProjects": true,
+        "nugetPackages": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.0"
+        },
+        "inferredTargets": {
+          "build": "build",
+          "lint": "lint",
+          "serve": "serve",
+          "test": "test"
+        },
+        "ignorePaths": [],
+        "tags": [
+          "nx-dotnet",
+          "nx-dotnet",
+          "nx-dotnet",
+          "nx-dotnet",
+          "nx-dotnet"
+        ]
+      }
+    }
+  ],
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    },
+    "@nx/eslint:lint": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/.eslintignore",
+        "{workspaceRoot}/eslint.config.js"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build",
+        "codegen",
+        "^codegen"
+      ]
+    },
+    "codegen": {
+      "cache": true
+    },
+    "swagger": {
+      "cache": true
+    }
+  }
 }
