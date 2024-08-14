@@ -1,4 +1,4 @@
-using DespachoWorkspace.Management.Application.UseCase.Queries.Dtos;
+using DespachoWorkspace.Management.Application.UseCase.TaxObligations.Queries.Dtos;
 using DespachoWorkspace.Management.Application.UseCase.Queries.GetTaxObligation;
 using DespachoWorkspace.Management.WebApi.Infrastructure;
 using Microsoft.AspNetCore.Mvc;

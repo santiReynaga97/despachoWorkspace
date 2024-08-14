@@ -1,5 +1,5 @@
 using DespachoWorkspace.Management.Application.Common.Interfaces.ITaxObligation;
-using DespachoWorkspace.Management.Application.UseCase.Queries.Dtos;
+using DespachoWorkspace.Management.Application.UseCase.TaxObligations.Queries.Dtos;
 using DespachoWorkspace.Management.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 

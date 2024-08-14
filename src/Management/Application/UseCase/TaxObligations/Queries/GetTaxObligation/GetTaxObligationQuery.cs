@@ -1,5 +1,5 @@
 using DespachoWorkspace.Management.Application.Common.Interfaces.ITaxObligation;
-using DespachoWorkspace.Management.Application.UseCase.Queries.Dtos;
+using DespachoWorkspace.Management.Application.UseCase.TaxObligations.Queries.Dtos;
 
 
 namespace DespachoWorkspace.Management.Application.UseCase.Queries.GetTaxObligation;
@@ -12,20 +12,18 @@ public record GetTaxObligationQuery : IRequest<List<TaxObligationDto>>
 
 public class GetTaxObligationQueryHandler : IRequestHandler<GetTaxObligationQuery, List<TaxObligationDto>>
 {
-    private readonly ITaxObligationRepository _repository;
-    private readonly IMapper _mapper;
+    private readonly ITaxObligationRepository _repository;    
     private readonly ILogger<GetTaxObligationQueryHandler> _logger;
 
-    public GetTaxObligationQueryHandler(ITaxObligationRepository repository, IMapper mapper, ILogger<GetTaxObligationQueryHandler> logger)
+    public GetTaxObligationQueryHandler(ITaxObligationRepository repository, ILogger<GetTaxObligationQueryHandler> logger)
     {
-        _repository = repository;
-        _mapper = mapper;
+        _repository = repository;        
         _logger = logger;
     }
 
     public async Task<List<TaxObligationDto>> Handle(GetTaxObligationQuery request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("entro al handler HOLAA PEPEPEP");
+        _logger.LogError("entro al handler HOLAA PEPEPEP");
        return  await _repository.GetTaxObligations();
     }
 }

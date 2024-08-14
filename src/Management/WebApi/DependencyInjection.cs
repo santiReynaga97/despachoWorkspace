@@ -1,7 +1,7 @@
 using DespachoWorkspace.Management.Application.Common.Interfaces;
 using DespachoWorkspace.Management.WebApi.Services;
 using DespachoWorkspace.Management.WebApi.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
+
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -15,11 +15,11 @@ public static class DependencyInjection
 
     services.AddExceptionHandler<CustomExceptionHandler>();
 
-    // // Customise default API behaviour
-    services.Configure<ApiBehaviorOptions>(options =>
-        options.SuppressModelStateInvalidFilter = true);
+    // // // Customise default API behaviour
+    // services.Configure<ApiBehaviorOptions>(options =>
+    //     options.SuppressModelStateInvalidFilter = true);
 
-    services.AddEndpointsApiExplorer();
+    // services.AddEndpointsApiExplorer();
 
     return services;
   }

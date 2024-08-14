@@ -1,5 +1,4 @@
-using DespachoWorkspace.Management.Application.UseCase.Queries.Dtos;
-using DespachoWorkspace.Management.Application.UseCase.Queries.GetTaxObligation;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace DespachoWorkspace.Management.WebApi.Controllers;
@@ -18,9 +17,10 @@ public class PruebaController : ControllerBase
     }
 
     [HttpGet]
-    public string Get()
+    public async Task<ActionResult<string>> Get()
     {
-        return "HOLA MUNDO";                
+
+       return await Task.FromResult("HOLA MUNDO");   
     }
 
     // [HttpGet(Name ="GetPrueba")]

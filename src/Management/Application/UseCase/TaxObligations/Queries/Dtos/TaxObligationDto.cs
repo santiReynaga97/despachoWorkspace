@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.Application.UseCase.Queries.Dtos
+namespace DespachoWorkspace.Management.Application.UseCase.TaxObligations.Queries.Dtos
 {
     public class TaxObligationDto
     {
