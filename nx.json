@@ -24,7 +24,10 @@
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "8.0.0"
+          "Microsoft.EntityFrameworkCore.Design": "8.0.0",
+          "MediatR": "12.4.0",
+          "AutoMapper": "13.0.1",
+          "FluentValidation": "11.0.0"
         },
         "inferredTargets": {
           "build": "build",
@@ -34,6 +37,9 @@
         },
         "ignorePaths": [],
         "tags": [
+          "nx-dotnet",
+          "nx-dotnet",
+          "nx-dotnet",
           "nx-dotnet",
           "nx-dotnet",
           "nx-dotnet",

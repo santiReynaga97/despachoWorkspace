@@ -1,3 +1,4 @@
+using DespachoWorkspace.Management.Infrastructure;
 using DespachoWorkspace.Management.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,7 +18,7 @@ public static class DependencyInjection
       options.UseNpgsql(connectionString);
     });
      
- 
+    services.AddManagementBackendScopedServices();
     services.AddSingleton(TimeProvider.System);
 
 

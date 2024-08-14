@@ -1,6 +1,6 @@
-using System.Reflection;
 using DespachoWorkspace.Management.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace DespachoWorkspace.Management.Infrastructure.Data;
 
