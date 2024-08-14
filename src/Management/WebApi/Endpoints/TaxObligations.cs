@@ -10,7 +10,7 @@ namespace DespachoWorkspace.Management.WebApi.Endpoints
         public override void Map(WebApplication app)
         {
             app.MapGroup(this)                
-                .MapGet(GetTaxObligation);                                          
+                .MapPost(GetTaxObligation);                                          
         }
 
         public Task<List<TaxObligationDto>> GetTaxObligation( [FromServices] ISender sender,  [FromBody] GetTaxObligationQuery query)

@@ -7,9 +7,10 @@ namespace DespachoWorkspace.Management.WebApi.Infrastructure;
 public class CustomExceptionHandler : IExceptionHandler
 {
     private readonly Dictionary<Type, Func<HttpContext, Exception, Task>> _exceptionHandlers;
-
-    public CustomExceptionHandler()
+    private ILogger<CustomExceptionHandler> _logger;
+    public CustomExceptionHandler(ILogger<CustomExceptionHandler> logger)
     {
+        _logger = logger;
         // Register known exception types and handlers.
         _exceptionHandlers = new()
             {
@@ -35,6 +36,7 @@ public class CustomExceptionHandler : IExceptionHandler
 
     private async Task HandleValidationException(HttpContext httpContext, Exception ex)
     {
+        _logger.LogInformation("HandleValidationException", ex);
         var exception = (ValidationException)ex;
 
         httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
@@ -48,6 +50,7 @@ public class CustomExceptionHandler : IExceptionHandler
 
     private async Task HandleNotFoundException(HttpContext httpContext, Exception ex)
     {
+        _logger.LogInformation("HandleNotFoundException", ex);
         var exception = (NotFoundException)ex;
 
         httpContext.Response.StatusCode = StatusCodes.Status404NotFound;
