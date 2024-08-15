@@ -19,7 +19,9 @@ public static class DependencyInjection
     // services.Configure<ApiBehaviorOptions>(options =>
     //     options.SuppressModelStateInvalidFilter = true);
 
-    // services.AddEndpointsApiExplorer();
+    services.AddControllers();
+    services.AddSwaggerGen();
+    services.AddEndpointsApiExplorer();
 
     return services;
   }
