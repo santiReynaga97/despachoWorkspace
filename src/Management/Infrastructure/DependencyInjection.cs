@@ -9,18 +9,9 @@ namespace Microsoft.Extensions.DependencyInjection;
 public static class DependencyInjection
 {
   public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
-  {
-    var connectionString = configuration.GetConnectionString("DefaultConnection");
-
-    services.AddDbContext<DespachoDbContext>((sp,options) =>
-    {
-      //options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
-      options.UseNpgsql(connectionString);
-    });
-     
-    services.AddManagementBackendScopedServices();
+  {    
+    services.AddPersistenceServices(configuration);
     services.AddSingleton(TimeProvider.System);
-
 
     return services;
   }
