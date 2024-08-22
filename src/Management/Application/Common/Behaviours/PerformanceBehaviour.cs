@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using DespachoWorkspace.Management.Application.Common.Interfaces;
 
 namespace DespachoWorkspace.Management.Application.Common.Behaviours;
 
@@ -7,19 +6,12 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
 {
     private readonly Stopwatch _timer;
     private readonly ILogger<TRequest> _logger;
-    private readonly IUser _user;
-//    private readonly IIdentityService _identityService;
 
     public PerformanceBehaviour(
-        ILogger<TRequest> logger,
-        IUser user)
-        //IIdentityService identityService)
+        ILogger<TRequest> logger)        
     {
         _timer = new Stopwatch();
-
-        _logger = logger;
-        _user = user;
-        //_identityService = identityService;
+        _logger = logger;                
     }
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
@@ -35,12 +27,11 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
         if (elapsedMilliseconds > 500)
         {
             var requestName = typeof(TRequest).Name;
-            var userId = _user.Id ?? string.Empty;
+            var userId = string.Empty;
             var userName = string.Empty;
 
             if (!string.IsNullOrEmpty(userId))
-            {
-                // userName = await _identityService.GetUserNameAsync(userId);
+            {                
                 userName = "prueba";
             }
 
