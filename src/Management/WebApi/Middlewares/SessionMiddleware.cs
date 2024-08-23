@@ -5,7 +5,8 @@ namespace DespachoWorkspace.Management.WebApi.Middlewares;
 public class SessionMiddleware
 {
     private readonly RequestDelegate _next;
-    private readonly ISessionService _sessionService;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
+
 
     private readonly string[] _whiteList = {
         "/weatherforecast",
@@ -13,10 +14,10 @@ public class SessionMiddleware
         "favicon.ico"
     };
 
-    public SessionMiddleware(RequestDelegate next, ISessionService sessionService)
+    public SessionMiddleware(RequestDelegate next, IServiceScopeFactory serviceScopeFactory)
     {
         _next = next;
-        _sessionService = sessionService;
+        _serviceScopeFactory = serviceScopeFactory;
     }
 
     public async Task Invoke(HttpContext context)
@@ -29,14 +30,19 @@ public class SessionMiddleware
             await _next(context);
             return;
         }
+        // Crear un nuevo alcance para el servicio scoped
+        using (var scope = _serviceScopeFactory.CreateScope())
+        {
+            var sessionService = scope.ServiceProvider.GetRequiredService<ISessionService>();
 
-        if (currentPath.Contains("delegates"))
-        {
-            _sessionService.InitializeDelegates();
-        }
-        else
-        {
-            _sessionService.Initialize();
+            if (currentPath.Contains("delegates"))
+            {
+                sessionService.InitializeDelegates();
+            }
+            else
+            {
+                sessionService.Initialize();
+            }
         }
 
         await _next(context);
