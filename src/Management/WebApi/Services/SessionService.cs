@@ -82,7 +82,7 @@ public class SessionService : ISessionService
         }
     }
 
-    private Guid DecryptHeaderValue(string header, string decryptionKey, string userAgent, bool isBase64Encoded = false)
+    private Guid DecryptHeaderValue(string header, string userAgent, string decryptionKey, bool isBase64Encoded = false)
     {
         if (!_httpContextAccesor.HttpContext.Request.Headers.TryGetValue(header, out StringValues value) || string.IsNullOrEmpty(value))
         {
@@ -93,7 +93,7 @@ public class SessionService : ISessionService
         {
             return new Guid(Encoding.UTF8.GetString(Convert.FromBase64String(value.ToString())));
         }
-       
+        
         return new Guid(_encryptionService.Decrypt(value, userAgent, decryptionKey));
     }
 }
