@@ -14,7 +14,8 @@ public class ApiExceptionFilter:IEndpointFilter
         _exceptionHandlers = new Dictionary<Type, Func<Exception, IResult>?>
         {
             { typeof(ValidationException), HandleValidationException },
-            { typeof(NotFoundException), HandleNotFoundException },            
+            { typeof(NotFoundException), HandleNotFoundException },    
+            {typeof(UnauthorizedAccessException),HandleNotFoundException}        
         };
     }
     

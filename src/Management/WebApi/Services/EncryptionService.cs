@@ -8,14 +8,23 @@ public class EncryptionService : IEncryptionService
 {
 
     private readonly IConfiguration _configuration;
+    private readonly ILogger<EncryptionService> _logger;
 
-    public EncryptionService(IConfiguration configuration)
+    public EncryptionService(IConfiguration configuration, ILogger<EncryptionService> logger)
     {
         _configuration = configuration;
+        _logger = logger;
     }
 
     public string Decrypt(string toDecrypt, string userAgent, string gID)
     {
+
+        _logger.LogInformation("pass Phrase: {Path}", _configuration["SharedCryptPharase"]);
+        _logger.LogInformation("SharedCryptIv: {Path}", _configuration["SharedCryptIv"]);
+        _logger.LogInformation("SharedCryptSaltKey: {Path}", _configuration["SharedCryptSaltKey"]);
+        _logger.LogInformation("SharedCryptHashDigest : {Path}", _configuration["SharedCryptHashDigest"]);
+        _logger.LogInformation("SharedCryptIterations : {Path}", _configuration["SharedCryptIterations"]);
+
         byte[] passPhrase = Encoding.ASCII.GetBytes(_configuration["SharedCryptPharase"]!);
         byte[] iv = Encoding.ASCII.GetBytes(_configuration["SharedCryptIv"]!);
         byte[] salt = Encoding.ASCII.GetBytes(_configuration["SharedCryptSaltKey"] + userAgent + gID);
