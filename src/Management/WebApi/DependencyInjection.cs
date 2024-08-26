@@ -16,8 +16,9 @@ public static class DependencyInjection
     services.AddExceptionHandler<CustomExceptionHandler>();
 
     services.AddScoped<CustomSessionModel>();
-    services.AddScoped<ISessionService, SessionService>();
     services.AddScoped<IEncryptionService, EncryptionService>();   
+    services.AddScoped<ISessionService, SessionService>();
+    
 
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen(c =>

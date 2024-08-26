@@ -21,7 +21,7 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endp
         public IEndpointRouteBuilder RegisterRoute(IEndpointRouteBuilder endpoints)
         {
             var blogGroup = endpoints.MapGroup("/api/tax-obligations").AddEndpointFilter<ApiExceptionFilter>();
-
+            
             blogGroup.MapGet("/", GetAllTaxObligations)
                 .WithName("GetAllTaxObligations")
                 .WithDisplayName("TaxObligation Reads Endpoints")
