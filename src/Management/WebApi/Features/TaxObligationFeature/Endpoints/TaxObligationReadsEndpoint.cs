@@ -4,7 +4,7 @@ using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Que
 using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetTaxObligationById;
 using DespachoWorkspace.Management.WebApi.Abstractions;
 using DespachoWorkspace.Management.WebApi.Filters;
-
+using DespachoWorkspace.Management.WebApi.Models;
 using IResult = Microsoft.AspNetCore.Http.IResult;
 
 namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endpoints
@@ -12,16 +12,22 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endp
     public class TaxObligationReadsEndpoint : IEndpoint
     {
         private readonly IMediator _mediator;
+        private readonly CustomSessionModel _session;
+        private readonly ILogger<TaxObligationReadsEndpoint> _logger;
 
-        public TaxObligationReadsEndpoint(IMediator mediator)
+        public TaxObligationReadsEndpoint(IMediator mediator,
+         CustomSessionModel customSessionModel,
+          ILogger<TaxObligationReadsEndpoint> logger)
         {
+            _session = customSessionModel;
+            _logger = logger;
             _mediator = mediator;
         }
 
         public IEndpointRouteBuilder RegisterRoute(IEndpointRouteBuilder endpoints)
         {
             var blogGroup = endpoints.MapGroup("/api/tax-obligations").AddEndpointFilter<ApiExceptionFilter>();
-            
+
             blogGroup.MapGet("/", GetAllTaxObligations)
                 .WithName("GetAllTaxObligations")
                 .WithDisplayName("TaxObligation Reads Endpoints")
@@ -53,6 +59,11 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endp
 
         private async Task<IResult> GetAllTaxObligations()
         {
+            _logger.LogInformation("sesion guid: {session}", _session.GuidID);
+            _logger.LogInformation("sesion guid: {session}", _session.LicenseID);
+
+            var peppito = _session.GuidID;
+
             var blogs = await _mediator.Send(new GetAllTaxObligationsQuery());
             return TypedResults.Ok(blogs);
         }
@@ -61,7 +72,6 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endp
             var blog = await _mediator.Send(new GetTaxObligationByIdQuery(Guid.Parse(id)));
             return TypedResults.Ok(blog);
         }
-
 
         // private async Task<IResult> GetBlogContributors(string id)
         // {
