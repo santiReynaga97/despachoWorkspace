@@ -44,9 +44,9 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxRegimeFeature.Endpoint
             return TypedResults.Ok(blogs);
         }
 
-        private async Task<IResult> GetByCodeOrDescription(string code, string description)
+        private async Task<IResult> GetByCodeOrDescription(string codeOrDescription)
         {
-            var query = new GetTaxRegimeByCodeOrDescQuery(code, description);
+            var query = new GetTaxRegimeByCodeOrDescQuery(codeOrDescription);
             var taxRegimes = await _mediator.Send(query);
             return TypedResults.Ok(taxRegimes);
         }

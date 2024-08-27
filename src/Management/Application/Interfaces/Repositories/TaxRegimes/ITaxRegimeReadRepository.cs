@@ -4,5 +4,5 @@ namespace DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxRe
 
 public interface ITaxRegimeReadRepository : IGenericReadRepository<TaxRegime>
 {
-     Task<List<TaxRegime>> GetByCodeOrDescriptionAsync(string code, string description);
+     Task<List<TaxRegime>> GetByCodeOrDescriptionAsync(string codeOrDescription);
 }

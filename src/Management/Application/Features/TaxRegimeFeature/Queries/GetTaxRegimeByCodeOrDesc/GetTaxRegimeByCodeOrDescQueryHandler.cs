@@ -22,12 +22,12 @@ namespace DespachoWorkspace.Management.Application.Features.TaxRegimeFeature.Que
         {
             _logger.LogInformation("Handling GetTaxRegimeByCodeOrDescQuery");
 
-            var taxRegimes = await _taxRegimesReadRepository.GetByCodeOrDescriptionAsync(request.Code, request.Description);
+            var taxRegimes = await _taxRegimesReadRepository.GetByCodeOrDescriptionAsync(request.CodeOrDescription);
 
             if (taxRegimes == null || taxRegimes.Count == 0)
             {
-                _logger.LogInformation($"No tax regimes found with code: {request.Code} or description: {request.Description}");
-                return new ErrorDataResult<List<GetTaxRegimeByCodeOrDescResponse>>($"No tax regimes found with code: {request.Code} or description: {request.Description}");
+                _logger.LogInformation($"No tax regimes found with code or description: {request.CodeOrDescription}");
+                return new ErrorDataResult<List<GetTaxRegimeByCodeOrDescResponse>>($"No tax regimes found with code or description: {request.CodeOrDescription}");
             }
 
             var response = _mapper.Map<List<GetTaxRegimeByCodeOrDescResponse>>(taxRegimes);

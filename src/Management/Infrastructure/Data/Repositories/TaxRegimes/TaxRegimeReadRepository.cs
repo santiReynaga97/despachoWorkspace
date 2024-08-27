@@ -6,14 +6,14 @@ namespace DespachoWorkspace.Management.Infrastructure.Data.Repositories.TaxRegim
 
 public class TaxRegimeReadRepository : GenericReadRepository<TaxRegime>, ITaxRegimeReadRepository
 {
-    public TaxRegimeReadRepository(DespachoDbContext dbContext) : base(dbContext)
-    {
-    }
+  public TaxRegimeReadRepository(DespachoDbContext dbContext) : base(dbContext)
+  {
+  }
 
-      public async Task<List<TaxRegime>> GetByCodeOrDescriptionAsync(string code, string description)
-        {
-            return await dbContext.Set<TaxRegime>()
-                .Where(tr => tr.Code == code || tr.Description == description)
-                .ToListAsync();
-        }
+  public async Task<List<TaxRegime>> GetByCodeOrDescriptionAsync(string codeOrDescription)
+  {
+    return await dbContext.Set<TaxRegime>()
+        .Where(tr => tr.Code == codeOrDescription || tr.Description == codeOrDescription)
+        .ToListAsync();
+  }
 }

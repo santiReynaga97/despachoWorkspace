@@ -1,5 +1,3 @@
-
-
 namespace Application.Features.TaxRegimeFeature.Queries.GetTaxRegimeByCodeOrDesc
 {
     public class GetTaxRegimeByCodeOrDescResponse
