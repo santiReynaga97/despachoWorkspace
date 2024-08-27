@@ -5,5 +5,5 @@ namespace DespachoWorkspace.Management.Application.Features.TaxRegimeFeature.Que
 
 public record GetAllTaxRegimesQuery : IRequest<IDataResult<List<GetAllTaxRegimesResponse>>>
 {
-
+    
 }
