@@ -1,9 +1,10 @@
-using DespachoWorkspace.Management.Application.Common.Models.Error;
+using Application.Features.TaxRegimeFeature.Queries.GetTaxRegimeByCodeOrDesc;
 using DespachoWorkspace.Management.Application.Common.Models.Results;
 using DespachoWorkspace.Management.Application.Features.TaxRegimeFeature.Queries.GetAllTaxRegimes;
+using DespachoWorkspace.Management.Application.Features.TaxRegimeFeature.Queries.GetTaxRegimeByCodeOrDesc;
 using DespachoWorkspace.Management.WebApi.Abstractions;
 using DespachoWorkspace.Management.WebApi.Filters;
-
+using Microsoft.AspNetCore.Mvc;
 using IResult = Microsoft.AspNetCore.Http.IResult;
 
 namespace DespachoWorkspace.Management.WebApi.Features.TaxRegimeFeature.Endpoints
@@ -28,6 +29,13 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxRegimeFeature.Endpoint
                 .Produces<SuccessDataResult<List<GetAllTaxRegimesResponse>>>()
                 .Produces(500);
 
+            blogGroup.MapGet("/search", GetByCodeOrDescription)
+                .WithName("GetByCodeOrDescription")
+                .WithDisplayName("TaxRegime Search Endpoint")
+                .WithTags("TaxRegimes")
+                .Produces<SuccessDataResult<List<GetTaxRegimeByCodeOrDescResponse>>>()
+                .Produces(500);
+
             return blogGroup;
         }
 
@@ -35,6 +43,13 @@ namespace DespachoWorkspace.Management.WebApi.Features.TaxRegimeFeature.Endpoint
         {
             var blogs = await _mediator.Send(new GetAllTaxRegimesQuery());
             return TypedResults.Ok(blogs);
+        }
+
+        private async Task<IResult> GetByCodeOrDescription([FromQuery] string code, [FromQuery] string description)
+        {
+            var query = new GetTaxRegimeByCodeOrDescQuery(code, description);
+            var taxRegimes = await _mediator.Send(query);
+            return TypedResults.Ok(taxRegimes);
         }
 
     }

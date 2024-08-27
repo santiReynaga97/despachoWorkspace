@@ -8,7 +8,7 @@ namespace DespachoWorkspace.Management.Infrastructure.Data.Repositories;
 
 public class GenericReadRepository<T> : IGenericReadRepository<T> where T : BaseEntity
 {
-    private readonly DespachoDbContext dbContext;
+    protected readonly DespachoDbContext dbContext;
 
     public GenericReadRepository(DespachoDbContext dbContext)
     {
