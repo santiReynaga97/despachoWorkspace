@@ -25,8 +25,7 @@ public class SessionService : ISessionService
     }
 
     public void Initialize()
-    {
-        _logger.LogInformation("ENtro Initialize");
+    {        
         var currentPath = _httpContextAccesor.HttpContext.Request.Path.ToString().ToLower();
         bool isCreateCompanyRequest = currentPath.Contains("companyassistant");
 
@@ -63,14 +62,13 @@ public class SessionService : ISessionService
     }
 
     public void InitializeDelegates()
-    {
-        _logger.LogInformation("ENtro InitializeDelegates");
-        _customSession.AuthorizationHeader = _httpContextAccesor.HttpContext.Request.Headers["Authorization"];
+    {        
+        _customSession.AuthorizationHeader = _httpContextAccesor.HttpContext!.Request.Headers["Authorization"];
     }
 
     private void ValidateRequiredHeaders(bool isCreateCompanyRequest)
     {
-        StringValues gId = _httpContextAccesor.HttpContext.Request.Headers["gid"];
+        StringValues gId = _httpContextAccesor.HttpContext!.Request.Headers["gid"];
         StringValues identityId = _httpContextAccesor.HttpContext.Request.Headers["iid"];
         StringValues instanceId = _httpContextAccesor.HttpContext.Request.Headers["inid"];
 
@@ -84,7 +82,7 @@ public class SessionService : ISessionService
 
     private Guid DecryptHeaderValue(string header, string userAgent, string decryptionKey, bool isBase64Encoded = false)
     {
-        if (!_httpContextAccesor.HttpContext.Request.Headers.TryGetValue(header, out StringValues value) || string.IsNullOrEmpty(value))
+        if (!_httpContextAccesor.HttpContext!.Request.Headers.TryGetValue(header, out StringValues value) || string.IsNullOrEmpty(value))
         {
             return Guid.Empty;
         }
@@ -94,6 +92,6 @@ public class SessionService : ISessionService
             return new Guid(Encoding.UTF8.GetString(Convert.FromBase64String(value.ToString())));
         }
         
-        return new Guid(_encryptionService.Decrypt(value, userAgent, decryptionKey));
+        return new Guid(_encryptionService.Decrypt(value!, userAgent, decryptionKey));
     }
 }

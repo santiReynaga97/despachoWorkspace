@@ -42,10 +42,33 @@ El microservicio Management ha sido desarrollado utilizando las siguientes estra
 - **xUnit:** Framework de pruebas unitarias.
 - **Docker:** Contenedorización de los microservicios para un despliegue eficiente.
 - **FluentValidation:** Contenedorización de los microservicios para un despliegue eficiente.
-- 
 
 ## Instalación
 
-Instalar con npm
+Ubicacion directorio: despachoWorkspace
+```bash
+npm i
+```
+## Migracion ef
 
+es necesario ejecutar los siguientes comandos para que funcionen las migraciones de ef. El motivo es por la configuracion especial que administra Nx para la compilacion y cache de los proyectos de .net
 
+Ubicacion directorio: despachoWorkspace
+```bash
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\WebApi\DespachoWorkspace.Management.WebApi.csproj --no-build dbcontext list
+```
+```bash
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\Infrastructure\DespachoWorkspace.Management.Infrastructure.csproj --no-build dbcontext list
+```
+```bash
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\WebApi\DespachoWorkspace.Management.WebApi.csproj --no-build dbcontext list 
+```
+```bash
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\Infrastructure\DespachoWorkspace.Management.Infrastructure.csproj --no-build dbcontext list
+```
+y luego pararse en el proyecto de infra y ejecutar los comandos de ef.
+
+Ubicacion directorio: despachoWorkspace\src\Management\Infrastructure
+```bash
+dotnet ef database update --msbuildprojectextensionspath ../../../dist/intermediates/src/Management/Infrastructure/obj --startup-project ..\WebApi\DespachoWorkspace.Management.WebApi.csproj
+```
