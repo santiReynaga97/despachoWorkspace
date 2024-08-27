@@ -1,8 +1,9 @@
 using DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxObligations;
+using DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxRegimes;
 using DespachoWorkspace.Management.Infrastructure.Data;
 using DespachoWorkspace.Management.Infrastructure.Data.Repositories.TaxObligations;
 using DespachoWorkspace.Management.Infrastructure.Data.Repositories.TaxRegimes;
-using DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxRegimes;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

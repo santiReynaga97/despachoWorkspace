@@ -8,7 +8,6 @@ public class GetTaxObligationByIdQueryHandler : IRequestHandler<GetTaxObligation
 {
     private readonly ITaxObligationReadRepository _taxObligationReadRepository;
     private readonly IMapper _mapper;
-
     private readonly ILogger<GetTaxObligationByIdQueryHandler> _logger;
 
     public GetTaxObligationByIdQueryHandler(ITaxObligationReadRepository taxObligationReadRepository, IMapper mapper, ILogger<GetTaxObligationByIdQueryHandler> logger)
