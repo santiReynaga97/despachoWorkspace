@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using DespachoWorkspace.Management.Domain.Entities;
+using DespachoWorkspace.Management.Domain.BaseEntities;
 
 
 namespace DespachoWorkspace.Management.Application.Interfaces.Repositories;

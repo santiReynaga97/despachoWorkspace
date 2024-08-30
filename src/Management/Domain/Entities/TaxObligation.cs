@@ -1,7 +1,9 @@
 
+using DespachoWorkspace.Management.Domain.BaseEntities;
+
 namespace DespachoWorkspace.Management.Domain.Entities
 {
-  public class TaxObligation : BaseEntity
+  public class TaxObligation : AuditableEntity
   {
     public string? Code { get; set; }
 

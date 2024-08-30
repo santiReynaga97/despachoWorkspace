@@ -1,15 +1,11 @@
-namespace DespachoWorkspace.Management.Domain.Entities;
+namespace DespachoWorkspace.Management.Domain.BaseEntities;
 
-public class BaseEntity
+public class AuditableEntity : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public DateTime? CreatedAt { get; set; }
     public Guid CreatedBy { get; set; }
-
     public DateTime? UpdatedAt { get; set; }
     public Guid UpdatedBy { get; set; }
-
     public DateTime? DeletedAt { get; set; }
     public Guid DeletedBy { get; set; }
     public bool Deleted { get; set; }
