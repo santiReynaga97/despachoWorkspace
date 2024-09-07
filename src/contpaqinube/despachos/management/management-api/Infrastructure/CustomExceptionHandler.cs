@@ -2,7 +2,7 @@ using DespachoWorkspace.Management.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DespachoWorkspace.Management.WebApi.Infrastructure;
+namespace ContpaqiNube.Despachos.Management.Api.Infrastructure;
 
 public class CustomExceptionHandler : IExceptionHandler
 {

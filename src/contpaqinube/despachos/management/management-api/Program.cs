@@ -1,4 +1,4 @@
-using DespachoWorkspace.Management.WebApi.Infrastructure;
+using ContpaqiNube.Despachos.Management.Api.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.WebApi.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
 
-namespace DespachoWorkspace.Management.WebApi.Features.UserFeature;
+namespace ContpaqiNube.Despachos.Management.Api.Features.UserFeature;
 
 public class UserModule : IModule
 {

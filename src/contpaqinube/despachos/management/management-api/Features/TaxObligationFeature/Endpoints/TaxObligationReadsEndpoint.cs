@@ -2,12 +2,12 @@ using DespachoWorkspace.Management.Application.Common.Models.Error;
 using DespachoWorkspace.Management.Application.Common.Models.Results;
 using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
 using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetTaxObligationById;
-using DespachoWorkspace.Management.WebApi.Abstractions;
-using DespachoWorkspace.Management.WebApi.Filters;
-using DespachoWorkspace.Management.WebApi.Models;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Filters;
+using ContpaqiNube.Despachos.Management.Api.Models;
 using IResult = Microsoft.AspNetCore.Http.IResult;
 
-namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endpoints
+namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.Endpoints
 {
     public class TaxObligationReadsEndpoint : IEndpoint
     {

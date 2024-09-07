@@ -3,7 +3,7 @@ using FluentValidation;
 using FluentValidation.Results;
 
 
-namespace DespachoWorkspace.Management.WebApi.Filters;
+namespace ContpaqiNube.Despachos.Management.Api.Filters;
 
 public class ModelValidationFilter<T> : IEndpointFilter where T : class
 {

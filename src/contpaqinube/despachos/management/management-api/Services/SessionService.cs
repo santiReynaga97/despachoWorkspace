@@ -1,11 +1,11 @@
 using System.Globalization;
 using System.Text;
 using System.Text.Json;
-using DespachoWorkspace.Management.WebApi.Abstractions;
-using DespachoWorkspace.Management.WebApi.Models;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Models;
 using Microsoft.Extensions.Primitives;
 
-namespace DespachoWorkspace.Management.WebApi.Services;
+namespace ContpaqiNube.Despachos.Management.Api.Services;
 
 public class SessionService : ISessionService
 {

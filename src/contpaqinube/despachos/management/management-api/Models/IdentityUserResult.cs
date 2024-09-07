@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.WebApi.Models;
+namespace ContpaqiNube.Despachos.Management.Api.Models;
 
 public class IdentityUserResult
 {

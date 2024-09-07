@@ -55,13 +55,13 @@ es necesario ejecutar los siguientes comandos para que funcionen las migraciones
 
 Ubicacion directorio: despachoWorkspace
 ```bash
-dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\WebApi\DespachoWorkspace.Management.WebApi.csproj --no-build dbcontext list
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\WebApi\ContpaqiNube.Despachos.Management.Api.csproj --no-build dbcontext list
 ```
 ```bash
 dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\Infrastructure\DespachoWorkspace.Management.Infrastructure.csproj --no-build dbcontext list
 ```
 ```bash
-dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\WebApi\DespachoWorkspace.Management.WebApi.csproj --no-build dbcontext list 
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\WebApi\ContpaqiNube.Despachos.Management.Api.csproj --no-build dbcontext list 
 ```
 ```bash
 dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\Infrastructure\DespachoWorkspace.Management.Infrastructure.csproj --no-build dbcontext list
@@ -70,5 +70,5 @@ y luego pararse en el proyecto de infra y ejecutar los comandos de ef.
 
 Ubicacion directorio: despachoWorkspace\src\Management\Infrastructure
 ```bash
-dotnet ef database update --msbuildprojectextensionspath ../../../dist/intermediates/src/Management/Infrastructure/obj --startup-project ..\WebApi\DespachoWorkspace.Management.WebApi.csproj
+dotnet ef database update --msbuildprojectextensionspath ../../../dist/intermediates/src/Management/Infrastructure/obj --startup-project ..\WebApi\ContpaqiNube.Despachos.Management.Api.csproj
 ```

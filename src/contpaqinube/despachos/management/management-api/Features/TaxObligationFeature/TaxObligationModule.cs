@@ -1,8 +1,8 @@
-using DespachoWorkspace.Management.WebApi.Abstractions;
-using DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature.Endpoints;
-using DespachoWorkspace.Management.WebApi.Models;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.Endpoints;
+using ContpaqiNube.Despachos.Management.Api.Models;
 
-namespace DespachoWorkspace.Management.WebApi.Features.TaxObligationFeature
+namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature
 {
     public class TaxObligationModule : IModule
     {

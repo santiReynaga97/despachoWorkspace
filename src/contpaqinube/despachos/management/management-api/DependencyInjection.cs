@@ -1,8 +1,8 @@
 using DespachoWorkspace.Management.Application.Common.Interfaces;
-using DespachoWorkspace.Management.WebApi.Services;
-using DespachoWorkspace.Management.WebApi.Infrastructure;
-using DespachoWorkspace.Management.WebApi.Abstractions;
-using DespachoWorkspace.Management.WebApi.Models;
+using ContpaqiNube.Despachos.Management.Api.Services;
+using ContpaqiNube.Despachos.Management.Api.Infrastructure;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Models;
 
 
 namespace Microsoft.Extensions.DependencyInjection;

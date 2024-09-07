@@ -2,7 +2,7 @@
 
 using DespachoWorkspace.Management.Application.Common.Models.Error;
 
-namespace DespachoWorkspace.Management.WebApi.Filters;
+namespace ContpaqiNube.Despachos.Management.Api.Filters;
 
 public class GuidValidationFilter : IEndpointFilter
 {

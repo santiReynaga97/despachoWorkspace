@@ -1,8 +1,8 @@
 using Result = DespachoWorkspace.Management.Application.Common.Models.Results;
-using DespachoWorkspace.Management.WebApi.Abstractions;
-using DespachoWorkspace.Management.WebApi.Filters;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Filters;
 
-namespace DespachoWorkspace.Management.WebApi.Features.UserFeature;
+namespace ContpaqiNube.Despachos.Management.Api.Features.UserFeature;
 
 public class UserEndpoint : IEndpoint
 {

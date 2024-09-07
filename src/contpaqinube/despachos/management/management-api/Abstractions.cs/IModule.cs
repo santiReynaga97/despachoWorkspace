@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.WebApi.Abstractions;
+namespace ContpaqiNube.Despachos.Management.Api.Abstractions;
 
 public interface IModule
 {

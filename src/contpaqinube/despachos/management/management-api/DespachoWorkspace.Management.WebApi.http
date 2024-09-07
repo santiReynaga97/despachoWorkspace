@@ -1,6 +1,0 @@
-@DespachoWorkspace.Management.WebApi_HostAddress = http://localhost:5271
-
-GET {{DespachoWorkspace.Management.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

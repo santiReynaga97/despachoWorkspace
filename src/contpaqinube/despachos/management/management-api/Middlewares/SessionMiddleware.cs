@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.WebApi.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
 
-namespace DespachoWorkspace.Management.WebApi.Middlewares;
+namespace ContpaqiNube.Despachos.Management.Api.Middlewares;
 
 public class SessionMiddleware
 {

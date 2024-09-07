@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.WebApi.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
 
-namespace DespachoWorkspace.Management.WebApi.Infrastructure;
+namespace ContpaqiNube.Despachos.Management.Api.Infrastructure;
 public static class ModuleExtensions
 {
     private static List<IModule> _modules = new();

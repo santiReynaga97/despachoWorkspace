@@ -1,8 +1,8 @@
 using System.Security.Cryptography;
 using System.Text;
-using DespachoWorkspace.Management.WebApi.Abstractions;
+using ContpaqiNube.Despachos.Management.Api.Abstractions;
 
-namespace DespachoWorkspace.Management.WebApi.Services;
+namespace ContpaqiNube.Despachos.Management.Api.Services;
 
 public class EncryptionService : IEncryptionService
 {

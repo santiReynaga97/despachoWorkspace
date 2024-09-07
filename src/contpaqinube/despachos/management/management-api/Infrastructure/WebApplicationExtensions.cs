@@ -1,7 +1,7 @@
 
-using DespachoWorkspace.Management.WebApi.Middlewares;
+using ContpaqiNube.Despachos.Management.Api.Middlewares;
 
-namespace DespachoWorkspace.Management.WebApi.Infrastructure;
+namespace ContpaqiNube.Despachos.Management.Api.Infrastructure;
 
 public static class WebApplicationExtensions
 {
