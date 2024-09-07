@@ -1,0 +1,25 @@
+{
+  "name": "obligations-api-swagger",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "executor": "nx:noop",
+      "outputs": ["generated/obligations-api-swagger"]
+    },
+    "codegen": {
+      "executor": "@nx-dotnet/core:openapi-codegen",
+      "options": {
+        "useOpenApiGenerator": true,
+        "openApiGenerator": "typescript",
+        "openapiJsonPath": "generated/obligations-api-swagger",
+        "outputProject": "generated-obligations-api-types"
+      },
+      "dependsOn": ["swagger"],
+      "inputs": ["{projectRoot}/generated/obligations-api-swagger"],
+      "outputs": ["{workspaceRoot}"]
+    }
+  },
+  "implicitDependencies": [
+    "obligations-api"
+  ]
+}

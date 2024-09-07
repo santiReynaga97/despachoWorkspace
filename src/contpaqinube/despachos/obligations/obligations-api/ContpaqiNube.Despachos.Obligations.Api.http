@@ -1,0 +1,6 @@
+@ContpaqiNube.Despachos.Obligations.Api_HostAddress = http://localhost:5298
+
+GET {{ContpaqiNube.Despachos.Obligations.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

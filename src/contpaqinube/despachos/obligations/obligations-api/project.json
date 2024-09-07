@@ -1,0 +1,17 @@
+{
+  "name": "obligations-api",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "src/contpaqinube/despachos/obligations/obligations-api",
+  "tags": [],
+  "targets": {
+    "swagger": {
+      "executor": "@nx-dotnet/core:update-swagger",
+      "outputs": ["{workspaceRoot}/generated/obligations-api-swagger"],
+      "options": {
+        "output": "generated/obligations-api-swagger"
+      },
+      "dependsOn": ["build"]
+    }
+  }
+}

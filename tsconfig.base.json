@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@despacho-workspace/generated/obligations-api-types": [
+        "generated/obligations-api-types/src/index.ts"
+      ],
       "@despacho-workspace/generated/web-api-types": [
         "generated/web-api-types/src/index.ts"
       ]

@@ -1,0 +1,9 @@
+{
+  "name": "obligations-domain",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "src/contpaqinube/despachos/obligations/obligations-domain",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project obligations-domain --web",
+  "targets": {}
+}
