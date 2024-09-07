@@ -1,5 +1,5 @@
 {
-  "name": "SrcManagement.WebApi",
+  "name": "management-api",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "src/management/WebApi",
@@ -7,9 +7,9 @@
   "targets": {
     "swagger": {
       "executor": "@nx-dotnet/core:update-swagger",
-      "outputs": ["{workspaceRoot}/generated/web-api-swagger"],
+      "outputs": ["{workspaceRoot}/generated/management-api-swagger"],
       "options": {
-        "output": "generated/web-api-swagger"
+        "output": "generated/management-api-swagger"
       },
       "dependsOn": ["build"]
     }

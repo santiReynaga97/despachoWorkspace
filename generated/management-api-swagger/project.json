@@ -1,23 +1,23 @@
 {
-  "name": "web-api-swagger",
+  "name": "management-api-swagger",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
     "build": {
       "executor": "nx:noop",
-      "outputs": ["generated/web-api-swagger"]
+      "outputs": ["generated/management-api-swagger"]
     },
     "codegen": {
       "executor": "@nx-dotnet/core:openapi-codegen",
       "options": {
         "useOpenApiGenerator": true,
         "openApiGenerator": "typescript",
-        "openapiJsonPath": "generated/web-api-swagger",
-        "outputProject": "generated-web-api-types"
+        "openapiJsonPath": "generated/management-api-swagger",
+        "outputProject": "generated-management-api-types"
       },
       "dependsOn": ["swagger"],
-      "inputs": ["{projectRoot}/generated/web-api-swagger"],
+      "inputs": ["{projectRoot}/generated/management-api-swagger"],
       "outputs": ["{workspaceRoot}"]
     }
   },
-  "implicitDependencies": ["SrcManagement.WebApi"]
+  "implicitDependencies": ["management-api"]
 }

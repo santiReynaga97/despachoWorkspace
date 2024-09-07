@@ -1,3 +1,3 @@
 export function generatedWebApiTypes(): string {
-  return 'generated-web-api-types';
+  return 'generated-management-api-types';
 }
