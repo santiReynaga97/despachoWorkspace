@@ -1,4 +1,4 @@
-using DespachoWorkspace.Management.Application.Common.Exceptions;
+using ContpaqiNube.Despachos.Management.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.Domain.Entities;
+using ContpaqiNube.Despachos.Management.Domain.Entities;
 
-namespace DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxObligations;
+namespace ContpaqiNube.Despachos.Management.Application.Interfaces.Repositories.TaxObligations;
 
 public interface ITaxObligationReadRepository: IGenericReadRepository<TaxObligation>
 {

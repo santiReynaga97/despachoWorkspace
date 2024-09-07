@@ -1,4 +1,4 @@
-using DespachoWorkspace.Management.Application.Common.Models.Error;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
 using FluentValidation;
 using FluentValidation.Results;
 

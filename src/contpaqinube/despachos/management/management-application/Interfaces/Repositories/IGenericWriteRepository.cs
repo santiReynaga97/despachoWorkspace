@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.Domain.BaseEntities;
+using ContpaqiNube.Despachos.Management.Domain.BaseEntities;
 
-namespace DespachoWorkspace.Management.Application.Interfaces.Repositories;
+namespace ContpaqiNube.Despachos.Management.Application.Interfaces.Repositories;
 
 public interface IGenericWriteRepository<T> where T : BaseEntity
 {

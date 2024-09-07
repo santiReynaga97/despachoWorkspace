@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DespachoWorkspace.Management.Application.Common.Models.Results;
+namespace ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 
 public class DataResult<T> : Result, IDataResult<T>
 {

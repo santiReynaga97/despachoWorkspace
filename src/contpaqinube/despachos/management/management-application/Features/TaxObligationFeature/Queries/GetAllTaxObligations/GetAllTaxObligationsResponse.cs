@@ -1,6 +1,6 @@
 
 
-namespace DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
+namespace ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
 public record GetAllTaxObligationsResponse
 {
     public Guid Id { get; init; }

@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.Application.Common.Interfaces
+namespace ContpaqiNube.Despachos.Management.Application.Common.Interfaces
 {
     public interface IScopedService
     {

@@ -1,7 +1,7 @@
-using DespachoWorkspace.Management.Application.Common.Models.Results;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 
 
-namespace DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
+namespace ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
 
 public class CreateTaxObligationCommand : IRequest<IDataResult<CreateTaxObligationResponse>>
 {

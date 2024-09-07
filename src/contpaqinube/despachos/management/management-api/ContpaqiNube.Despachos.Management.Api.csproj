@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\management-infrastructure\DespachoWorkspace.Management.Infrastructure.csproj" />
-    <ProjectReference Include="..\management-application\DespachoWorkspace.Management.Application.csproj" />
+    <ProjectReference Include="..\management-infrastructure\ContpaqiNube.Despachos.Management.Infrastructure.csproj" />
+    <ProjectReference Include="..\management-application\ContpaqiNube.Despachos.Management.Application.csproj" />
   </ItemGroup>
 
 </Project>

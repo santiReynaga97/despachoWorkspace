@@ -1,7 +1,7 @@
-using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
-using DespachoWorkspace.Management.Domain.Entities;
+using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
+using ContpaqiNube.Despachos.Management.Domain.Entities;
 
-namespace DespachoWorkspace.Management.Application.Features.TaxObligationFeature.AutoMapperProfiles;
+namespace ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.AutoMapperProfiles;
 
 public class TaxObligationWritesProfile : Profile
 {

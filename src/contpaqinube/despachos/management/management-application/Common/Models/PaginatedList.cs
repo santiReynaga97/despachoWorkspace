@@ -1,5 +1,5 @@
 
-namespace DespachoWorkspace.Management.Application.Common.Models
+namespace ContpaqiNube.Despachos.Management.Application.Common.Models
 {
     public class PaginatedList<T>
     {

@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.Application.Common.Exceptions;
+namespace ContpaqiNube.Despachos.Management.Application.Common.Exceptions;
 
 public class NotFoundException : Exception
 {

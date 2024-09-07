@@ -1,4 +1,4 @@
-using Result = DespachoWorkspace.Management.Application.Common.Models.Results;
+using Result = ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
 using ContpaqiNube.Despachos.Management.Api.Filters;
 

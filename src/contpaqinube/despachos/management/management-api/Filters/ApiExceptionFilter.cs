@@ -1,6 +1,6 @@
 
-using DespachoWorkspace.Management.Application.Common.Exceptions;
-using DespachoWorkspace.Management.Application.Common.Models.Error;
+using ContpaqiNube.Despachos.Management.Application.Common.Exceptions;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
 
 
 

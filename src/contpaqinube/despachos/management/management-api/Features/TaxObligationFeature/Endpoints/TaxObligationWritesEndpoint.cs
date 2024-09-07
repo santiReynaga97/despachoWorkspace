@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.Application.Common.Models.Error;
-using DespachoWorkspace.Management.Application.Common.Models.Results;
-using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
+using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
 using ContpaqiNube.Despachos.Management.Api.Filters;
 using IResult = Microsoft.AspNetCore.Http.IResult;

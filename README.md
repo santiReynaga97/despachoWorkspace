@@ -58,13 +58,13 @@ Ubicacion directorio: despachoWorkspace
 dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\WebApi\ContpaqiNube.Despachos.Management.Api.csproj --no-build dbcontext list
 ```
 ```bash
-dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\Infrastructure\DespachoWorkspace.Management.Infrastructure.csproj --no-build dbcontext list
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\Infrastructure\obj\ --project .\src\Management\Infrastructure\ContpaqiNube.Despachos.Management.Infrastructure.csproj --no-build dbcontext list
 ```
 ```bash
 dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\WebApi\ContpaqiNube.Despachos.Management.Api.csproj --no-build dbcontext list 
 ```
 ```bash
-dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\Infrastructure\DespachoWorkspace.Management.Infrastructure.csproj --no-build dbcontext list
+dotnet ef --msbuildprojectextensionspath .\dist\intermediates\src\Management\WebApi\obj\ --project .\src\Management\Infrastructure\ContpaqiNube.Despachos.Management.Infrastructure.csproj --no-build dbcontext list
 ```
 y luego pararse en el proyecto de infra y ejecutar los comandos de ef.
 

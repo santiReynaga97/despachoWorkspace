@@ -1,6 +1,6 @@
 
 
-namespace DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation
+namespace ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation
 {
     public record CreateTaxObligationResponse
     {

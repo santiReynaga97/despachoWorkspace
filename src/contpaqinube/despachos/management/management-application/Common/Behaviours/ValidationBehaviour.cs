@@ -1,6 +1,6 @@
-using ValidationException = DespachoWorkspace.Management.Application.Common.Exceptions.ValidationException;
+using ValidationException = ContpaqiNube.Despachos.Management.Application.Common.Exceptions.ValidationException;
 
-namespace DespachoWorkspace.Management.Application.Common.Behaviours;
+namespace ContpaqiNube.Despachos.Management.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull

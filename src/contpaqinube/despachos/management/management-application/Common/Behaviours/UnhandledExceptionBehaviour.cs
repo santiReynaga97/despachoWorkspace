@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.Application.Common.Behaviours;
+namespace ContpaqiNube.Despachos.Management.Application.Common.Behaviours;
 
 public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {

@@ -1,7 +1,7 @@
-using DespachoWorkspace.Management.Application.Common.Models.Results;
-using DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxObligations;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
+using ContpaqiNube.Despachos.Management.Application.Interfaces.Repositories.TaxObligations;
 
-namespace DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
+namespace ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
 
 public class GetAllTaxObligationsQueryHandler : IRequestHandler<GetAllTaxObligationsQuery, IDataResult<List<GetAllTaxObligationsResponse>>>
 {

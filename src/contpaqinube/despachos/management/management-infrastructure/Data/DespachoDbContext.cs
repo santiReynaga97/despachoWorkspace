@@ -1,8 +1,8 @@
-using DespachoWorkspace.Management.Domain.Entities;
+using ContpaqiNube.Despachos.Management.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace DespachoWorkspace.Management.Infrastructure.Data;
+namespace ContpaqiNube.Despachos.Management.Infrastructure.Data;
 
 public class DespachoDbContext : DbContext
 {

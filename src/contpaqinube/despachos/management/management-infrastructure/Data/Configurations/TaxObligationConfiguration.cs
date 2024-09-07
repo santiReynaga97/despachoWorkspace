@@ -1,8 +1,8 @@
-using DespachoWorkspace.Management.Domain.Entities;
+using ContpaqiNube.Despachos.Management.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DespachoWorkspace.Management.Infrastructure.Data.Configurations;
+namespace ContpaqiNube.Despachos.Management.Infrastructure.Data.Configurations;
 
 public class TaxObligationConfiguration : IEntityTypeConfiguration<TaxObligation>
 {

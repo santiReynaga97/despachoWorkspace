@@ -1,6 +1,6 @@
 
 
-using DespachoWorkspace.Management.Application.Common.Models.Error;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
 
 namespace ContpaqiNube.Despachos.Management.Api.Filters;
 

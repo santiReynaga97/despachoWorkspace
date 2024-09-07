@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\management-application\DespachoWorkspace.Management.Application.csproj" />
+    <ProjectReference Include="..\management-application\ContpaqiNube.Despachos.Management.Application.csproj" />
     <ProjectReference Include="..\..\despachos-database\ContpaqiNube.Despachos.DataBase.csproj" />
   </ItemGroup>
 

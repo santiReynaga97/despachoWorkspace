@@ -1,5 +1,5 @@
 using System.Reflection;
-using DespachoWorkspace.Management.Application.Common.Behaviours;
+using ContpaqiNube.Despachos.Management.Application.Common.Behaviours;
 
 
 namespace Microsoft.Extensions.DependencyInjection;

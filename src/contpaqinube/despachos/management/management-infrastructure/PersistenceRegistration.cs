@@ -1,11 +1,11 @@
-using DespachoWorkspace.Management.Application.Interfaces.Repositories.TaxObligations;
-using DespachoWorkspace.Management.Infrastructure.Data;
-using DespachoWorkspace.Management.Infrastructure.Data.Repositories.TaxObligations;
+using ContpaqiNube.Despachos.Management.Application.Interfaces.Repositories.TaxObligations;
+using ContpaqiNube.Despachos.Management.Infrastructure.Data;
+using ContpaqiNube.Despachos.Management.Infrastructure.Data.Repositories.TaxObligations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DespachoWorkspace.Management.Infrastructure;
+namespace ContpaqiNube.Despachos.Management.Infrastructure;
 
 public static class PersistenceRegistration
 {

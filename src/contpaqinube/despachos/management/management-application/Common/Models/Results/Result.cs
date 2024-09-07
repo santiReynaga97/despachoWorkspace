@@ -1,4 +1,4 @@
-﻿namespace DespachoWorkspace.Management.Application.Common.Models.Results;
+﻿namespace ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 
 public class Result : IResult
 {

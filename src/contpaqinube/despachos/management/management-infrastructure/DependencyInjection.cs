@@ -1,5 +1,5 @@
-using DespachoWorkspace.Management.Infrastructure;
-using DespachoWorkspace.Management.Infrastructure.Data;
+using ContpaqiNube.Despachos.Management.Infrastructure;
+using ContpaqiNube.Despachos.Management.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

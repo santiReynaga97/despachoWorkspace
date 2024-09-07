@@ -1,6 +1,6 @@
-using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
+using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
 
-namespace DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
+namespace ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
 
 public class CreateTaxObligationValidator: AbstractValidator<CreateTaxObligationCommand>
 {

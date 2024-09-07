@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.Application.Common.Models.Error;
+namespace ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
 
 public class ValidationErrorResponse: BaseErrorResponse
 {

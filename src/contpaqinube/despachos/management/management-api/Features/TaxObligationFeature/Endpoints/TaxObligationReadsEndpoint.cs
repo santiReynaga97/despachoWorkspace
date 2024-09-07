@@ -1,7 +1,7 @@
-using DespachoWorkspace.Management.Application.Common.Models.Error;
-using DespachoWorkspace.Management.Application.Common.Models.Results;
-using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
-using DespachoWorkspace.Management.Application.Features.TaxObligationFeature.Queries.GetTaxObligationById;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
+using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
+using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Queries.GetTaxObligationById;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
 using ContpaqiNube.Despachos.Management.Api.Filters;
 using ContpaqiNube.Despachos.Management.Api.Models;

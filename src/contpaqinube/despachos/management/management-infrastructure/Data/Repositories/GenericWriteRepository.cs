@@ -1,8 +1,8 @@
-using DespachoWorkspace.Management.Application.Interfaces.Repositories;
-using DespachoWorkspace.Management.Domain.BaseEntities;
+using ContpaqiNube.Despachos.Management.Application.Interfaces.Repositories;
+using ContpaqiNube.Despachos.Management.Domain.BaseEntities;
 
 
-namespace DespachoWorkspace.Management.Infrastructure.Data.Repositories;
+namespace ContpaqiNube.Despachos.Management.Infrastructure.Data.Repositories;
 
 public class GenericWriteRepository<T> : IGenericWriteRepository<T> where T : BaseEntity
 {

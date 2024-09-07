@@ -1,7 +1,7 @@
 
-using DespachoWorkspace.Management.Domain.BaseEntities;
+using ContpaqiNube.Despachos.Management.Domain.BaseEntities;
 
-namespace DespachoWorkspace.Management.Domain.Entities
+namespace ContpaqiNube.Despachos.Management.Domain.Entities
 {
   public class TaxObligation : AuditableEntity
   {

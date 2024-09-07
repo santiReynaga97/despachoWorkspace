@@ -1,4 +1,4 @@
-using DespachoWorkspace.Management.Application.Common.Interfaces;
+using ContpaqiNube.Despachos.Management.Application.Common.Interfaces;
 using ContpaqiNube.Despachos.Management.Api.Services;
 using ContpaqiNube.Despachos.Management.Api.Infrastructure;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;

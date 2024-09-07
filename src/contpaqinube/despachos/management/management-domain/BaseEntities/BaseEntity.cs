@@ -1,4 +1,4 @@
-namespace DespachoWorkspace.Management.Domain.BaseEntities;
+namespace ContpaqiNube.Despachos.Management.Domain.BaseEntities;
 
 public class BaseEntity
 {

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DespachoWorkspace.Management.Infrastructure.Migrations
+namespace ContpaqiNube.Despachos.Management.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialMigration : Migration

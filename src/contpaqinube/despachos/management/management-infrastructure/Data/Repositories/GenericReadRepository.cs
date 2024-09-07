@@ -1,10 +1,10 @@
 using System.Linq.Expressions;
-using DespachoWorkspace.Management.Application.Interfaces.Repositories;
-using DespachoWorkspace.Management.Domain.BaseEntities;
+using ContpaqiNube.Despachos.Management.Application.Interfaces.Repositories;
+using ContpaqiNube.Despachos.Management.Domain.BaseEntities;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace DespachoWorkspace.Management.Infrastructure.Data.Repositories;
+namespace ContpaqiNube.Despachos.Management.Infrastructure.Data.Repositories;
 
 public class GenericReadRepository<T> : IGenericReadRepository<T> where T : BaseEntity
 {

@@ -1,7 +1,7 @@
-using DespachoWorkspace.Management.Application.Common.Models.Error;
+using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
 using FluentValidation.Results;
 
-namespace DespachoWorkspace.Management.Application.Common.Exceptions;
+namespace ContpaqiNube.Despachos.Management.Application.Common.Exceptions;
 
 public class ValidationException : Exception
 {
