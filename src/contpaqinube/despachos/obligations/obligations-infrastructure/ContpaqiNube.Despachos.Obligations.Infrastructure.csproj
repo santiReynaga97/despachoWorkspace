@@ -1,5 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\obligations-application\ContpaqiNube.Despachos.Obligations.Application.csproj" />
+    <ProjectReference Include="..\..\despachos-database\ContpaqiNube.Despachos.DataBase.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\obligations-application\ContpaqiNube.Despachos.Obligations.Application.csproj" />
+    <ProjectReference Include="..\obligations-infrastructure\ContpaqiNube.Despachos.Obligations.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
