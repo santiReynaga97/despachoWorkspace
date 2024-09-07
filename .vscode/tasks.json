@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/Management/WebApi/DespachoWorkspace.Management.WebApi.csproj",
+                "${workspaceFolder}/src/contpaqinube/despachos/management/management-api/DespachoWorkspace.Management.WebApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/Management/WebApi/DespachoWorkspace.Management.WebApi.csproj",
+                "${workspaceFolder}/src/contpaqinube/despachos/management/management-api/DespachoWorkspace.Management.WebApi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/src/Management/WebApi/DespachoWorkspace.Management.WebApi.csproj"
+                "${workspaceFolder}/src/contpaqinube/despachos/management/management-api/DespachoWorkspace.Management.WebApi.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

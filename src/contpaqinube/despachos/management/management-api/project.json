@@ -2,7 +2,7 @@
   "name": "management-api",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "src/management/WebApi",
+  "sourceRoot": "src/contpaqinube/despachos/management/management-api",
   "tags": [],
   "targets": {
     "swagger": {

@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Application\DespachoWorkspace.Management.Application.csproj" />
+    <ProjectReference Include="..\management-application\DespachoWorkspace.Management.Application.csproj" />
   </ItemGroup>
 
 </Project>
