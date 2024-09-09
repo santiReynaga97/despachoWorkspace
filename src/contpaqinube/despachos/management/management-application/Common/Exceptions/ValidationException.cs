@@ -15,15 +15,15 @@ public class ValidationException : Exception
         Errors = new Dictionary<string, string[]>();
         ValidationErrorResponse = new ValidationErrorResponse
         {
-            StatusCode = 422,
-            StatusPhrase = "Bad request",
-            Timestamp = DateTime.Now
+            Status = 422,
+            Title = "Bad request",
+            Detail = "One or more validation errors have occurred. Please check the request data."
         };
     }
 
     public ValidationException(IEnumerable<ValidationFailure> failures)
         : this()
-    {        
+    {
         Errors = failures
             .GroupBy(e => e.PropertyName, e => e.ErrorMessage)
             .ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());
@@ -34,15 +34,14 @@ public class ValidationException : Exception
     {
         var apiError = new ValidationErrorResponse
         {
-            StatusCode = 422,
-            StatusPhrase = "Bad request",
-            Timestamp = DateTime.Now
-
+            Status = 422,
+            Title = "Bad request",
+            Detail = "One or more validation errors have occurred. Please verify the provided fields.",
         };
         failures.ForEach(e => apiError.Errors.Add(new ValidationErrorResponse.ValidationError
         {
-            PropertyName = e.PropertyName.ToLower(),
-            ErrorMessage = e.ErrorMessage
+            Field = e.PropertyName.ToLower(),
+            Message = e.ErrorMessage
         }));
         return apiError;
     }
