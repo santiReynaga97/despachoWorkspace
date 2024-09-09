@@ -1,4 +1,3 @@
-
 using ContpaqiNube.Despachos.Management.Api.Middlewares;
 
 namespace ContpaqiNube.Despachos.Management.Api.Infrastructure;
@@ -9,8 +8,9 @@ public static class WebApplicationExtensions
   {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseHttpsRedirection();
-    app.UseMiddleware<SessionMiddleware>();
+    app.UseHttpsRedirection();    
+    app.UseMiddleware<CustomExceptionHandler>();
+
     return app;
   }
 }

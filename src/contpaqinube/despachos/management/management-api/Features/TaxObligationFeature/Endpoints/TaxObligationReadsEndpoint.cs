@@ -3,30 +3,25 @@ using ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Queries.GetAllTaxObligations;
 using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Queries.GetTaxObligationById;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
-using ContpaqiNube.Despachos.Management.Api.Filters;
-using ContpaqiNube.Despachos.Management.Api.Models;
 using IResult = Microsoft.AspNetCore.Http.IResult;
 
 namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.Endpoints
 {
     public class TaxObligationReadsEndpoint : IEndpoint
     {
-        private readonly IMediator _mediator;
-        private readonly CustomSessionModel _session;
+        private readonly IMediator _mediator;        
         private readonly ILogger<TaxObligationReadsEndpoint> _logger;
 
-        public TaxObligationReadsEndpoint(IMediator mediator,
-         CustomSessionModel customSessionModel,
+        public TaxObligationReadsEndpoint(IMediator mediator,         
           ILogger<TaxObligationReadsEndpoint> logger)
-        {
-            _session = customSessionModel;
+        {            
             _logger = logger;
             _mediator = mediator;
         }
 
         public IEndpointRouteBuilder RegisterRoute(IEndpointRouteBuilder endpoints)
         {
-            var blogGroup = endpoints.MapGroup("/api/tax-obligations").AddEndpointFilter<ApiExceptionFilter>();
+            var blogGroup = endpoints.MapGroup("/api/tax-obligations");
 
             blogGroup.MapGet("/", GetAllTaxObligations)
                 .WithName("GetAllTaxObligations")
@@ -35,8 +30,7 @@ namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.En
                 .Produces<SuccessDataResult<List<GetAllTaxObligationsResponse>>>()
                 .Produces(500);
 
-            blogGroup.MapGet("/{id}", GetTaxObligationById)
-                .AddEndpointFilter<GuidValidationFilter>()
+            blogGroup.MapGet("/{id}", GetTaxObligationById)                
                 .WithName("GetTaxObligationById")
                 .WithDisplayName("TaxObligation Reads Endpoints")
                 .WithTags("TaxObligations")
@@ -59,11 +53,6 @@ namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.En
 
         private async Task<IResult> GetAllTaxObligations()
         {
-            _logger.LogInformation("sesion guid: {session}", _session.GuidID);
-            _logger.LogInformation("sesion guid: {session}", _session.LicenseID);
-
-            var peppito = _session.GuidID;
-
             var blogs = await _mediator.Send(new GetAllTaxObligationsQuery());
             return TypedResults.Ok(blogs);
         }

@@ -2,7 +2,6 @@ using ContpaqiNube.Despachos.Management.Application.Common.Models.Error;
 using ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 using ContpaqiNube.Despachos.Management.Application.Features.TaxObligationFeature.Commands.CreateTaxObligation;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
-using ContpaqiNube.Despachos.Management.Api.Filters;
 using IResult = Microsoft.AspNetCore.Http.IResult;
 
 
@@ -19,10 +18,9 @@ namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.En
 
         public IEndpointRouteBuilder RegisterRoute(IEndpointRouteBuilder endpoints)
         {
-            var blogGroup = endpoints.MapGroup("/api/tax-obligations").AddEndpointFilter<ApiExceptionFilter>();
+            var blogGroup = endpoints.MapGroup("/api/tax-obligations");
 
-            blogGroup.MapPost("/", CreateTaxObligation)
-                .AddEndpointFilter<GuidValidationFilter>()                
+            blogGroup.MapPost("/", CreateTaxObligation)                    
                 .WithName("CreateTaxObligation")
                 .WithDisplayName("TaxObligation Writes Endpoints")
                 .WithTags("TaxObligations")

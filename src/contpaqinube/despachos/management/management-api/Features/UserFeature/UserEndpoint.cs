@@ -1,6 +1,6 @@
 using Result = ContpaqiNube.Despachos.Management.Application.Common.Models.Results;
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
-using ContpaqiNube.Despachos.Management.Api.Filters;
+
 
 namespace ContpaqiNube.Despachos.Management.Api.Features.UserFeature;
 
@@ -15,7 +15,7 @@ public class UserEndpoint : IEndpoint
 
     public IEndpointRouteBuilder RegisterRoute(IEndpointRouteBuilder endpoints)
     {
-        var blogGroup = endpoints.MapGroup("/api/users").AddEndpointFilter<ApiExceptionFilter>();
+        var blogGroup = endpoints.MapGroup("/api/users");
 
         blogGroup.MapGet("/", SyncUsers)
             .WithName("sync")

@@ -1,18 +1,16 @@
 using ContpaqiNube.Despachos.Management.Api.Abstractions;
 using ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature.Endpoints;
-using ContpaqiNube.Despachos.Management.Api.Models;
 
 namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature
 {
     public class TaxObligationModule : IModule
     {
-        private IMediator? _mediator;
-        private CustomSessionModel? _session;
+        private IMediator? _mediator;        
 
         private ILogger<TaxObligationReadsEndpoint>? _logger;
         public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints)
         {
-            new TaxObligationReadsEndpoint(_mediator!, _session!, _logger!).RegisterRoute(endpoints);
+            new TaxObligationReadsEndpoint(_mediator!, _logger!).RegisterRoute(endpoints);
             new TaxObligationWritesEndpoint(_mediator!).RegisterRoute(endpoints);
 
             return endpoints;
@@ -22,8 +20,7 @@ namespace ContpaqiNube.Despachos.Management.Api.Features.TaxObligationFeature
         {
             var provider = builder.Services.BuildServiceProvider();
             
-            _mediator = provider.GetRequiredService<IMediator>();
-            _session = provider.GetRequiredService<CustomSessionModel>();
+            _mediator = provider.GetRequiredService<IMediator>();            
             _logger = provider.GetRequiredService<ILogger<TaxObligationReadsEndpoint>>();
 
             return builder;
